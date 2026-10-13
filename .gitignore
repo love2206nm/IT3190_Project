@@ -1,0 +1,99 @@
+# ==========================================
+# 🐍 Python Bytecode & Cache
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ==========================================
+# 🌐 Virtual Environments (Môi trường ảo)
+# ==========================================
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ==========================================
+# 🔑 Environment Variables & API Keys (Bảo mật)
+# ==========================================
+.env
+.env.local
+.env.*
+!.env.example
+
+# ==========================================
+# 📓 Jupyter Notebooks (File checkpoint tạm)
+# ==========================================
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# ==========================================
+# 🤖 Machine Learning Models & Heavy Artifacts
+# ==========================================
+# Không commit file model weights nặng lên Git
+*.joblib
+*.pkl
+*.pickle
+*.onnx
+*.pt
+*.pth
+*.bin
+*.h5
+source/model/classifier/saved_models/*
+!source/model/classifier/saved_models/.gitkeep
+
+# ==========================================
+# 📊 Processed Data (Dữ liệu sinh ra)
+# ==========================================
+data/clean_data/*
+!data/clean_data/.gitkeep
+
+# ==========================================
+# 💻 IDE & Text Editors
+# ==========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# ==========================================
+# 🖥️ OS Generated Files (Windows / Mac)
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ==========================================
+# 📝 Logs & Temporary Files
+# ==========================================
+*.log
+logs/
+tmp/
+temp/
