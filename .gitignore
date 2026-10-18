@@ -77,6 +77,9 @@ junit.xml
 *.h5
 source/model/classifier/saved_models/*
 !source/model/classifier/saved_models/.gitkeep
+!source/model/classifier/saved_models/best_model.joblib
+!source/model/classifier/saved_models/tfidf_vectorizer.joblib
+!source/model/classifier/saved_models/label_mapping.json
 
 # ==========================================
 # 📊 Processed Data (Dữ liệu sinh ra)

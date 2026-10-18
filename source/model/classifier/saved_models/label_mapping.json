@@ -1,0 +1,29 @@
+{
+  "ordered_labels": [
+    "Enjoyment",
+    "Disgust",
+    "Anger",
+    "Sadness",
+    "Fear",
+    "Surprise",
+    "Other"
+  ],
+  "label_to_id": {
+    "Enjoyment": 0,
+    "Disgust": 1,
+    "Anger": 2,
+    "Sadness": 3,
+    "Fear": 4,
+    "Surprise": 5,
+    "Other": 6
+  },
+  "id_to_label": {
+    "0": "Enjoyment",
+    "1": "Disgust",
+    "2": "Anger",
+    "3": "Sadness",
+    "4": "Fear",
+    "5": "Surprise",
+    "6": "Other"
+  }
+}

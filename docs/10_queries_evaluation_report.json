@@ -1,0 +1,322 @@
+[
+  {
+    "id": 1,
+    "text": "khi nào phường có chế độ phát chồng khi mang thân đến đăng kí kết hôn tự nguyện 😊",
+    "expected": "Enjoyment",
+    "predicted": "Enjoyment",
+    "intensity": 0.7317,
+    "is_mixed": false,
+    "is_balanced_fallback": false,
+    "top_3_emotions": [
+      [
+        "Enjoyment",
+        0.7317
+      ],
+      [
+        "Disgust",
+        0.172
+      ],
+      [
+        "Sadness",
+        0.0302
+      ]
+    ],
+    "all_scores": {
+      "Enjoyment": 0.7317,
+      "Disgust": 0.172,
+      "Anger": 0.0063,
+      "Sadness": 0.0302,
+      "Fear": 0.0274,
+      "Surprise": 0.0147,
+      "Other": 0.0176
+    }
+  },
+  {
+    "id": 2,
+    "text": "làm công nhân đã bị vắt kiệt sức khỏe cho đến khi bị thải",
+    "expected": "Sadness",
+    "predicted": "Sadness",
+    "intensity": 0.7338,
+    "is_mixed": false,
+    "is_balanced_fallback": false,
+    "top_3_emotions": [
+      [
+        "Sadness",
+        0.7338
+      ],
+      [
+        "Disgust",
+        0.0906
+      ],
+      [
+        "Enjoyment",
+        0.0669
+      ]
+    ],
+    "all_scores": {
+      "Enjoyment": 0.0669,
+      "Disgust": 0.0906,
+      "Anger": 0.0273,
+      "Sadness": 0.7338,
+      "Fear": 0.0166,
+      "Surprise": 0.0076,
+      "Other": 0.0572
+    }
+  },
+  {
+    "id": 3,
+    "text": "thái độ phục vụ quá mất dạy, lừa đảo khách hàng coi chừng quả báo",
+    "expected": "Anger",
+    "predicted": "Anger",
+    "intensity": 0.4886,
+    "is_mixed": true,
+    "is_balanced_fallback": false,
+    "top_3_emotions": [
+      [
+        "Anger",
+        0.4886
+      ],
+      [
+        "Disgust",
+        0.4134
+      ],
+      [
+        "Other",
+        0.0496
+      ]
+    ],
+    "all_scores": {
+      "Enjoyment": 0.026,
+      "Disgust": 0.4134,
+      "Anger": 0.4886,
+      "Sadness": 0.0043,
+      "Fear": 0.0138,
+      "Surprise": 0.0044,
+      "Other": 0.0496
+    }
+  },
+  {
+    "id": 4,
+    "text": "đi đêm một mình qua đoạn đường vắng này sợ toát cả mồ hôi, rùng mình",
+    "expected": "Fear",
+    "predicted": "Fear",
+    "intensity": 0.7858,
+    "is_mixed": false,
+    "is_balanced_fallback": false,
+    "top_3_emotions": [
+      [
+        "Fear",
+        0.7858
+      ],
+      [
+        "Other",
+        0.0913
+      ],
+      [
+        "Sadness",
+        0.06
+      ]
+    ],
+    "all_scores": {
+      "Enjoyment": 0.0228,
+      "Disgust": 0.017,
+      "Anger": 0.0127,
+      "Sadness": 0.06,
+      "Fear": 0.7858,
+      "Surprise": 0.0103,
+      "Other": 0.0913
+    }
+  },
+  {
+    "id": 5,
+    "text": "nhìn thấy bát bún có giòi bò lúc nhúc tởm lợm kinh khủng khiếp",
+    "expected": "Disgust",
+    "predicted": "Disgust",
+    "intensity": 0.6386,
+    "is_mixed": true,
+    "is_balanced_fallback": false,
+    "top_3_emotions": [
+      [
+        "Disgust",
+        0.6386
+      ],
+      [
+        "Fear",
+        0.2328
+      ],
+      [
+        "Sadness",
+        0.0618
+      ]
+    ],
+    "all_scores": {
+      "Enjoyment": 0.0341,
+      "Disgust": 0.6386,
+      "Anger": 0.007,
+      "Sadness": 0.0618,
+      "Fear": 0.2328,
+      "Surprise": 0.005,
+      "Other": 0.021
+    }
+  },
+  {
+    "id": 6,
+    "text": "thật không thể tin nổi là mình lại trúng số độc đắc ối giời ơi",
+    "expected": "Surprise",
+    "predicted": "Surprise",
+    "intensity": 0.7551,
+    "is_mixed": false,
+    "is_balanced_fallback": false,
+    "top_3_emotions": [
+      [
+        "Surprise",
+        0.7551
+      ],
+      [
+        "Sadness",
+        0.1095
+      ],
+      [
+        "Enjoyment",
+        0.045
+      ]
+    ],
+    "all_scores": {
+      "Enjoyment": 0.045,
+      "Disgust": 0.0068,
+      "Anger": 0.0218,
+      "Sadness": 0.1095,
+      "Fear": 0.0369,
+      "Surprise": 0.7551,
+      "Other": 0.0249
+    }
+  },
+  {
+    "id": 7,
+    "text": "hôm nay ngày mai thời tiết bình thường, đi học lúc 7 giờ sáng",
+    "expected": "Other",
+    "predicted": "Other",
+    "intensity": 0.3232,
+    "is_mixed": true,
+    "is_balanced_fallback": false,
+    "top_3_emotions": [
+      [
+        "Other",
+        0.3232
+      ],
+      [
+        "Enjoyment",
+        0.3166
+      ],
+      [
+        "Disgust",
+        0.168
+      ]
+    ],
+    "all_scores": {
+      "Enjoyment": 0.3166,
+      "Disgust": 0.168,
+      "Anger": 0.0028,
+      "Sadness": 0.1143,
+      "Fear": 0.0309,
+      "Surprise": 0.0442,
+      "Other": 0.3232
+    }
+  },
+  {
+    "id": 8,
+    "text": "ôi bất ngờ quá, món quà sinh nhật xịn sò tuyệt cú mèo luôn 🎁😍",
+    "expected": "Enjoyment",
+    "predicted": "Surprise",
+    "intensity": 0.6567,
+    "is_mixed": true,
+    "is_balanced_fallback": false,
+    "top_3_emotions": [
+      [
+        "Surprise",
+        0.6567
+      ],
+      [
+        "Enjoyment",
+        0.2569
+      ],
+      [
+        "Disgust",
+        0.0442
+      ]
+    ],
+    "all_scores": {
+      "Enjoyment": 0.2569,
+      "Disgust": 0.0442,
+      "Anger": 0.0011,
+      "Sadness": 0.0369,
+      "Fear": 0.0031,
+      "Surprise": 0.6567,
+      "Other": 0.0012
+    }
+  },
+  {
+    "id": 9,
+    "text": "haizzz ... thế là chưa có kq gì tốt đẹp cả .. bản thân cố gắng cũng chẳng dễ dàng gì :((",
+    "expected": "Sadness",
+    "predicted": "Sadness",
+    "intensity": 0.9645,
+    "is_mixed": false,
+    "is_balanced_fallback": false,
+    "top_3_emotions": [
+      [
+        "Sadness",
+        0.9645
+      ],
+      [
+        "Surprise",
+        0.0133
+      ],
+      [
+        "Other",
+        0.0107
+      ]
+    ],
+    "all_scores": {
+      "Enjoyment": 0.0057,
+      "Disgust": 0.0038,
+      "Anger": 0.0004,
+      "Sadness": 0.9645,
+      "Fear": 0.0016,
+      "Surprise": 0.0133,
+      "Other": 0.0107
+    }
+  },
+  {
+    "id": 10,
+    "text": "phải bồi thường thiệt hại bị trầy xước thân tàu . tiền sơn lại mấy toa tàu chắc cũng bộn .",
+    "expected": "Other",
+    "predicted": "Other",
+    "intensity": 0.6087,
+    "is_mixed": false,
+    "is_balanced_fallback": false,
+    "top_3_emotions": [
+      [
+        "Other",
+        0.6087
+      ],
+      [
+        "Disgust",
+        0.198
+      ],
+      [
+        "Sadness",
+        0.0639
+      ]
+    ],
+    "all_scores": {
+      "Enjoyment": 0.0495,
+      "Disgust": 0.198,
+      "Anger": 0.006,
+      "Sadness": 0.0639,
+      "Fear": 0.0519,
+      "Surprise": 0.022,
+      "Other": 0.6087
+    }
+  }
+]
