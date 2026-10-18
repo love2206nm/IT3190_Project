@@ -2,25 +2,14 @@
 # Deploy trực tiếp trên https://render.com
 services:
   - type: web
-    name: uit-vsmec-sentiment-api
+    name: it3190-project
     runtime: docker
     dockerfilePath: ./Dockerfile
-    plan: free # 512 MB RAM, 0.1 CPU (Đủ cho ~200 QPS)
+    plan: free # 512 MB RAM, 0.1 CPU
     region: singapore
     envVars:
       - key: PORT
         value: 10000
       - key: LOG_LEVEL
         value: INFO
-    healthCheckPath: /health
-
-  - type: web
-    name: uit-vsmec-sentiment-ui
-    runtime: docker
-    dockerfilePath: ./Dockerfile
-    dockerCommand: streamlit run source/ui/app.py --server.port $PORT --server.headless true --server.address 0.0.0.0
-    plan: free # 512 MB RAM, 0.1 CPU
-    region: singapore
-    envVars:
-      - key: PORT
-        value: 10000
+    healthCheckPath: /_stcore/health

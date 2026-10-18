@@ -1,11 +1,11 @@
-# Multi-stage optimized Dockerfile for UIT-VSMEC Sentiment Analysis
+# Multi-stage optimized Dockerfile for UIT-VSMEC Sentiment Analysis (Frontend UI & API)
 FROM python:3.11-slim as base
 
 # Ngăn Python tạo file .pyc và buffer output ra stdout
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     PYTHONPATH="/app" \
-    PORT=8000
+    PORT=8501
 
 WORKDIR /app
 
@@ -33,12 +33,12 @@ COPY --chown=appuser:appuser .env.example ./.env.example
 
 USER appuser
 
-# Expose cả cổng API (8000) và Streamlit (8501)
-EXPOSE 8000 8501
+# Expose cả cổng Streamlit Frontend (8501) và API (8000)
+EXPOSE 8501 8000
 
-# Healthcheck xác thực trạng thái container
-HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
-    CMD curl -f http://localhost:${PORT:-8000}/health || exit 1
+# Healthcheck xác thực trạng thái Streamlit Frontend
+HEALTHCHECK --interval=30s --timeout=5s --start-period=15s --retries=3 \
+    CMD curl -f http://localhost:${PORT:-8501}/_stcore/health || curl -f http://localhost:${PORT:-8501}/ || exit 1
 
-# Mặc định chạy FastAPI service (Tương thích chuẩn Render Web Service)
-CMD ["sh", "-c", "uvicorn source.api.main:app --host 0.0.0.0 --port ${PORT:-8000}"]
+# Mặc định khởi chạy Frontend Web UI (source/ui/app.py) trên cổng PORT do Render cấp phát
+CMD ["sh", "-c", "python -m streamlit run source/ui/app.py --server.port ${PORT:-8501} --server.address 0.0.0.0 --server.headless true --server.enableCORS false --server.enableXsrfProtection false --browser.gatherUsageStats false"]
