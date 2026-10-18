@@ -7,6 +7,16 @@ from source.api.main import app
 client = TestClient(app)
 
 
+def test_root_endpoint() -> None:
+    response = client.get("/")
+    assert response.status_code == 200
+    data = response.json()
+    assert data["status"] == "healthy"
+    assert "/docs" in data["docs_url"]
+    assert "/health" in data["health_url"]
+    assert "/api/v1/predict" in data["predict_url"]
+
+
 def test_health_check() -> None:
     response = client.get("/health")
     assert response.status_code == 200

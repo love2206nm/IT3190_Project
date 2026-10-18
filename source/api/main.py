@@ -42,6 +42,20 @@ class PredictResponse(BaseModel):
     probabilities: Dict[str, float]
 
 
+@app.get("/", summary="Cổng thông tin gốc (Root Gateway)")
+def root() -> Dict[str, str]:
+    """Trả về thông tin ứng dụng và đường dẫn tài liệu API."""
+    return {
+        "status": "healthy",
+        "app_name": settings.app_name,
+        "version": settings.app_version,
+        "message": "UIT-VSMEC Sentiment Analysis API is running.",
+        "docs_url": "/docs",
+        "health_url": "/health",
+        "predict_url": "/api/v1/predict",
+    }
+
+
 @app.get("/health", summary="Kiểm tra trạng thái server")
 def health_check() -> Dict[str, str]:
     """Trả về trạng thái hoạt động của hệ thống."""
