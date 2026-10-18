@@ -1,0 +1,120 @@
+"""Từ điển Ánh xạ Emoji và Emoticon sang Semantic Tokens (UIT-VSMEC).
+
+Bảo toàn thông tin cảm xúc trong văn bản mạng xã hội:
+- icon_vui: Thích thú, vui vẻ, hạnh phúc, tiếng cười
+- icon_buon: Buồn bã, khóc lóc, thất vọng
+- icon_tuc_gian: Tức giận, phẫn nộ, chửi bới
+- icon_so_hai: Sợ hãi, lo âu, run rẩy
+- icon_ghe_tom: Ghê tởm, buồn nôn, khó chịu
+- icon_ngac_nhien: Bất ngờ, ngạc nhiên, sốc
+- icon_khac: Trung tính hoặc khác
+"""
+
+from typing import Dict
+
+EMOJI_DICT: Dict[str, str] = {
+    # 1. Nhóm Vui vẻ / Thích thú (icon_vui)
+    "❤️": "icon_vui",
+    "💖": "icon_vui",
+    "💕": "icon_vui",
+    "💓": "icon_vui",
+    "💗": "icon_vui",
+    "😍": "icon_vui",
+    "🥰": "icon_vui",
+    "😘": "icon_vui",
+    "😚": "icon_vui",
+    "😊": "icon_vui",
+    "😄": "icon_vui",
+    "😃": "icon_vui",
+    "😀": "icon_vui",
+    "😁": "icon_vui",
+    "😆": "icon_vui",
+    "😂": "icon_vui",
+    "🤣": "icon_vui",
+    "😋": "icon_vui",
+    "😜": "icon_vui",
+    "😝": "icon_vui",
+    "😎": "icon_vui",
+    "🥳": "icon_vui",
+    "👍": "icon_vui",
+    "👏": "icon_vui",
+    "🎉": "icon_vui",
+    "✨": "icon_vui",
+    ":))": "icon_vui",
+    ":)))": "icon_vui",
+    ":D": "icon_vui",
+    ":d": "icon_vui",
+    ":-)": "icon_vui",
+    ":)": "icon_vui",
+    "^^": "icon_vui",
+    "^_^": "icon_vui",
+    "<3": "icon_vui",
+    "xd": "icon_vui",
+    "xD": "icon_vui",
+    # 2. Nhóm Buồn bã / Khóc (icon_buon)
+    "😭": "icon_buon",
+    "😢": "icon_buon",
+    "😥": "icon_buon",
+    "😓": "icon_buon",
+    "😔": "icon_buon",
+    "😞": "icon_buon",
+    "🥺": "icon_buon",
+    "😿": "icon_buon",
+    "💔": "icon_buon",
+    ":(": "icon_buon",
+    ":-( ": "icon_buon",
+    ":'( ": "icon_buon",
+    ":'(": "icon_buon",
+    ":((": "icon_buon",
+    ":(((": "icon_buon",
+    "hic": "icon_buon",
+    "huhu": "icon_buon",
+    "hix": "icon_buon",
+    # 3. Nhóm Tức giận / Bực tức (icon_tuc_gian)
+    "😡": "icon_tuc_gian",
+    "😠": "icon_tuc_gian",
+    "🤬": "icon_tuc_gian",
+    "😤": "icon_tuc_gian",
+    "💢": "icon_tuc_gian",
+    "👿": "icon_tuc_gian",
+    "👺": "icon_tuc_gian",
+    "👎": "icon_tuc_gian",
+    "grr": "icon_tuc_gian",
+    # 4. Nhóm Sợ hãi / Lo lắng (icon_so_hai)
+    "😱": "icon_so_hai",
+    "😨": "icon_so_hai",
+    "😰": "icon_so_hai",
+    "🥶": "icon_so_hai",
+    "😣": "icon_so_hai",
+    "😖": "icon_so_hai",
+    "😫": "icon_so_hai",
+    "😩": "icon_so_hai",
+    # 5. Nhóm Ghê tởm / Khó chịu (icon_ghe_tom)
+    "🤢": "icon_ghe_tom",
+    "🤮": "icon_ghe_tom",
+    "🤧": "icon_ghe_tom",
+    "🤒": "icon_ghe_tom",
+    "😷": "icon_ghe_tom",
+    "💩": "icon_ghe_tom",
+    "😒": "icon_ghe_tom",
+    "🙄": "icon_ghe_tom",
+    "😑": "icon_ghe_tom",
+    # 6. Nhóm Bất ngờ / Ngạc nhiên (icon_ngac_nhien)
+    "😲": "icon_ngac_nhien",
+    "😮": "icon_ngac_nhien",
+    "😯": "icon_ngac_nhien",
+    "😳": "icon_ngac_nhien",
+    "🤯": "icon_ngac_nhien",
+    "👀": "icon_ngac_nhien",
+    ":o": "icon_ngac_nhien",
+    ":O": "icon_ngac_nhien",
+    "o_O": "icon_ngac_nhien",
+    "O_o": "icon_ngac_nhien",
+    "vcl": "icon_ngac_nhien",
+    # 7. Nhóm Khác / Trung tính (icon_khac)
+    "🤔": "icon_khac",
+    "😐": "icon_khac",
+    "😶": "icon_khac",
+    "🤷": "icon_khac",
+    "🤦": "icon_khac",
+}

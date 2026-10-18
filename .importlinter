@@ -1,0 +1,59 @@
+[importlinter]
+root_package = source
+include_external_packages = True
+
+[importlinter:contract:domain-isolation]
+name = Domain layer must not import any outer layers
+type = forbidden
+source_modules =
+    source.domain
+forbidden_modules =
+    source.services
+    source.model
+    source.data_process
+    source.infrastructure
+    source.api
+    source.ui
+    sklearn
+    fastapi
+    streamlit
+    google
+
+[importlinter:contract:models-and-data-process-cannot-access-database-repo]
+name = Models and data process must not access database repository directly
+type = forbidden
+source_modules =
+    source.model
+    source.data_process
+forbidden_modules =
+    source.infrastructure.database
+allow_indirect_imports = true
+
+[importlinter:contract:presentation-cannot-import-models-directly]
+name = Presentation layer must not import models or preprocessing directly
+type = forbidden
+source_modules =
+    source.api
+    source.ui
+forbidden_modules =
+    source.model
+    source.data_process
+allow_indirect_imports = true
+
+[importlinter:contract:services-isolation]
+name = Services must not import presentation frameworks
+type = forbidden
+source_modules =
+    source.services
+forbidden_modules =
+    source.api
+    source.ui
+
+[importlinter:contract:clean-architecture-layers]
+name = Clean Architecture Layers Dependency Rule
+type = layers
+layers =
+    source.api | source.ui
+    source.services.cli
+    source.model | source.data_process | source.infrastructure
+    source.domain

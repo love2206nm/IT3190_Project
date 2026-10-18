@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "text": "Điểm thi qua môn rồi mừng rơi nước mắt các bác ơi",
+    "expected_emotion": "Enjoyment",
+    "category": "teencode_idiom"
+  },
+  {
+    "id": 2,
+    "text": "Sao lại đối xử với tôi như thế, thật sự quá thất vọng",
+    "expected_emotion": "Sadness",
+    "category": "negative_emotion"
+  },
+  {
+    "id": 3,
+    "text": "Giao hàng như lừa đảo, thái độ shipper lồi lõm cực kỳ",
+    "expected_emotion": "Anger",
+    "category": "complaint"
+  },
+  {
+    "id": 4,
+    "text": "Nhìn con sâu bò lúc nhúc gớm chết đi được",
+    "expected_emotion": "Disgust",
+    "category": "phobia_disgust"
+  },
+  {
+    "id": 5,
+    "text": "Đi đêm một mình qua nghĩa địa nghe tiếng động lạ sởn gai ốc",
+    "expected_emotion": "Fear",
+    "category": "horror_fear"
+  },
+  {
+    "id": 6,
+    "text": "Ủa cái gì vậy trời, không thể tin vào mắt mình luôn",
+    "expected_emotion": "Surprise",
+    "category": "shock_surprise"
+  },
+  {
+    "id": 7,
+    "text": "Thời tiết hôm nay bình thường, nhiệt độ 28 độ C",
+    "expected_emotion": "Other",
+    "category": "neutral_informative"
+  }
+]

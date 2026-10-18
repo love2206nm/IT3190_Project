@@ -1,0 +1,31 @@
+# ==========================================
+# 🐳 Docker Build Context Ignore
+# ==========================================
+.git/
+.github/
+.vscode/
+.idea/
+.agents/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.import_linter_cache/
+.grimp_cache/
+.coverage
+htmlcov/
+*.log
+logs/*
+!logs/.gitkeep
+docs/
+tmp/
+temp/
+notebooks/
+tests/

@@ -1,0 +1,42 @@
+{
+  "MultinomialNB": {
+    "best_param": {
+      "alpha": 0.1
+    },
+    "macro_f1": 0.4669229910971616,
+    "accuracy": 0.5408163265306123,
+    "train_time_sec": 0.002833843231201172
+  },
+  "LogisticRegression": {
+    "best_param": {
+      "C": 10.0
+    },
+    "macro_f1": 0.543657568019123,
+    "accuracy": 0.575801749271137,
+    "train_time_sec": 1.0099611282348633
+  },
+  "LinearSVC": {
+    "best_param": {
+      "C": 0.1
+    },
+    "macro_f1": 0.5294888145995752,
+    "accuracy": 0.5728862973760933,
+    "train_time_sec": 0.200911283493042
+  },
+  "DecisionTree": {
+    "best_param": {
+      "max_depth": 15
+    },
+    "macro_f1": 0.30665374315390576,
+    "accuracy": 0.3338192419825073,
+    "train_time_sec": 0.26213693618774414
+  },
+  "RandomForest": {
+    "best_param": {
+      "n_estimators": 150
+    },
+    "macro_f1": 0.4463889633065109,
+    "accuracy": 0.47667638483965014,
+    "train_time_sec": 0.4719376564025879
+  }
+}

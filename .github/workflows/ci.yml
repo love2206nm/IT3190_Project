@@ -1,0 +1,75 @@
+name: Clean Architecture CI & Auto Ready for Review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches: [main, develop]
+  push:
+    branches: [main, develop]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  guardrails-and-tests:
+    name: Kiểm tra Rào chắn cứng & Đánh giá 10/10
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 1. Checkout mã nguồn
+        uses: actions/checkout@v4
+
+      - name: 2. Thiết lập Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: "pip"
+
+      - name: 3. Cài đặt các công cụ kiểm thử & phụ thuộc
+        run: |
+          python -m pip install --upgrade pip
+          pip install ruff import-linter mypy pytest
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          mkdir -p logs
+
+      - name: 4. Rào chắn 1 - Kiểm tra Cú pháp & Hàm cấm (Ruff)
+        run: |
+          ruff check source/ tests/
+
+      - name: 5. Rào chắn 2 - Khóa Ranh giới Clean Architecture (Import Linter 5 Hợp đồng)
+        run: |
+          lint-imports
+
+      - name: 6. Rào chắn 3 - Quét Comment rác từ AI
+        run: |
+          python scripts/check_no_ai_comments.py
+
+      - name: 7. Rào chắn 4 - Chạy Toàn bộ Unit Tests & Kiểm tra Log Kênh (Pytest)
+        run: |
+          pytest tests/ -v
+
+      - name: 8. Lưu trữ Logs làm Artifact kiểm tra
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: execution-logs
+          path: logs/
+          retention-days: 7
+
+      - name: 9. Tự động thăng hạng Draft PR sang Ready for Review khi 10/10 Xanh
+        if: success() && github.event_name == 'pull_request'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          echo "🎉 Tất cả rào chắn và bài test đã đạt 10/10!"
+          gh pr ready $PR_NUMBER || echo "PR đã ở trạng thái Ready for Review."
+          gh pr comment $PR_NUMBER --body "### 🤖 AGENT CERTIFICATION REPORT
+          - ✅ **Ruff Code Guardrails:** PASS (Không có hàm cấm print trái phép / lỗi cú pháp)
+          - ✅ **Clean Architecture Boundaries:** PASS (5 hợp đồng Import Linter bảo vệ toàn vẹn)
+          - ✅ **Data Access & Logging Boundaries:** PASS (Truy cập dữ liệu qua Repo, Logging phân kênh tách biệt)
+          - ✅ **AI Comment Guardrails:** PASS (Không có comment rác)
+          - ✅ **Pytest Suite:** PASS (100% xanh)
+          
+          PR đã được tự động chuyển sang **Ready for Review** cho Bếp Trưởng @${{ github.repository_owner }} duyệt!"

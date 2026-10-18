@@ -21,6 +21,8 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+*.manifest
+*.spec
 
 # ==========================================
 # 🌐 Virtual Environments (Môi trường ảo)
@@ -39,6 +41,21 @@ venv.bak/
 .env.local
 .env.*
 !.env.example
+
+# ==========================================
+# 🧪 Testing & Code Quality Caches
+# ==========================================
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.importlinter_cache/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+nosetests.xml
+junit.xml
 
 # ==========================================
 # 📓 Jupyter Notebooks (File checkpoint tạm)
@@ -94,6 +111,14 @@ desktop.ini
 # 📝 Logs & Temporary Files
 # ==========================================
 *.log
-logs/
+logs/*
+!logs/.gitkeep
 tmp/
 temp/
+
+# ==========================================
+# 🐳 Docker & Deploy Caches
+# ==========================================
+.docker/
+node_modules/
+npm-debug.log*
